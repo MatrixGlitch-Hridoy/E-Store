@@ -2,12 +2,14 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import React, { useState } from 'react';
 import styled from "styled-components";
 import { sliderItems } from "../data";
+import { mobile } from "../responsive";
 const Container = styled.div`
     width:100%;
     height:100vh;
     display:flex;
     position:relative;
     overflow:hidden;
+    ${mobile({ display: "none" })}
 `;
 
 ////////Arrow Button For Slide/////////
@@ -36,6 +38,7 @@ const Wrapper = styled.div`
     display:flex;
     transition:all 1.5s ease;
     transform:translateX(${props=>props.slideIndex*-100}vw);
+    
 `;
 
 ///////////Slider////////////
